@@ -1,314 +1,485 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Vanilla JS Accordion Menu Nested</title>
 
-  <link rel="stylesheet" href='css/styles.css' />
+  <link rel='stylesheet' href='css/styles.css'/>
 </head>
-
-<body>
-
-  <div class='intro'>
+  <body> 
+  <h1>Data<span style="color: blue">Viz</span>Guide</h1>
+  <div id='intro'>
     <p>Візуалізація даних —  дисципліна відносно молода, з неї можна знайти доволі багато дійсно хорошої літератури, статтей, блогів та курсів. Проблемою для початківця скоріше стане не пошук інформації, а розуміння з чого почати і в якій послідовності рухатися. </p>
     <p>Цей ресурс створено щоб допомогти вам розібратися, які джерела дають базові знання, а які розглядають вужчі питання. Всю інформацію поділено на розділи, які збігаються з алгоритмом створення інфографіки: робота з даними, вибір типу графіка, пошук історії в даних, дизайн в інфографіці. В кожному розділі ви знайдете списки літератури, інструментів та корисних ресурсів. До кожного пункту я додала опис чи коментар, для всіх книги є посилання, за яким їх можна знайти у продажу, однак ви можете пошукати пропозиції  більш вигідні, ніж за посиланням. Ті книги, які офіційно є у вільному доступі мають посилання на безкоштовну версію. Також окремо додаю розділи про роботу з картами, інтерактивними графіками, перелік наявних в Україні онлайн курсів та список персоналій, за якими варто стежити в цій сфері.</p>
     <p>Дякую за допомогу у створенні цієї сторінки моїм колегам з https://texty.org.ua/, особливо Анатолію Бондаренко, керівнику напрямку журналістики даних, аналітикам Денису Губашову, Петру Боднару та Євгенії Дроздовій.</p>
-      
+    
     <p>Якщо в вас виникнуть питання чи пропозиції, пишіть мені.</p>
     <p>Надя Кельм</p>
   </div>
 
-  <div class="main">   
-      <p class="level-1">Робота із даними</p>      
-      <div class="level-2-wrapper">        
-            <p class="level-2-accordion">Книги</p>
-            <div class="details">
-              <p class="details" >Before the suede shoes have been
-                worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-            </div>
-
-            <p class="level-2-accordion">Посібник по роботі з даними</p>
-            <div class="details">
-              <p class="details">Because Bobux shoes are made from a
-                variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                different care needs, so to find out how your pair are best looked after, please see our <a
-                  href="shoe-care">Care Instructions guide</a>.</p>
-            </div>
-
-            <p class="level-2-accordion">Інструменти </p>
-            <div class="details">
-              <p class="details">Leather shoes can be particularly
-                prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                  Instructions guide</a>. </p>
-            </div>
-
-
-            <p class="level-2-accordion">Ресурси з відкритими даними </p>
-            <div class="details">
-              <p class="details">Leather shoes can be particularly
-                prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                  Instructions guide</a>. </p>
-            </div>
-
-            <p class="level-2-accordion">Курси з аналізу даних</p>
-            <div class="details">
-              <p class="details">Leather shoes can be particularly
-                prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                  Instructions guide</a>. </p>
-            </div>          
-        </div> 
-     
-
-
-
-
-      <p class="level-1">Вибір типу графіка </p>      
-      <div class="level-2-wrapper">
-             
-             <p class="level-2-accordion">Книги</p>
-             <div class="details">
-               <p class="details">Before the suede shoes have been
-                 worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-             </div>
- 
-             <p class="level-2-accordion">Інструменти для створення графіки</p>
-             <div class="details">
-               <p class="details">Because Bobux shoes are made from a
-                 variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                 different care needs, so to find out how your pair are best looked after, please see our <a
-                   href="shoe-care">Care Instructions guide</a>.</p>
-             </div>
- 
-             <p class="level-2-accordion">Ресурси для підбору типу графіку</p>
-             <div class="details">
-               <p class="details">Leather shoes can be particularly
-                 prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                   Instructions guide</a>. </p>
-             </div>
-          
-       </div>
-   
+  <main>
+  <div class="accordion-menu-wrapper active" id="menu-parent-1" data-accordion-wrapper>
+    <nav role="navigation" class="accordion-menu">
+      <ul class="accordion-menu__list">
        
+       
+        <li class="accordion-menu__item">
+          <a href="#menu-1" class="accordion-menu__link level-1" data-accordion-menu>
+            <span class='heading-1'>Робота із даними</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1">
+            <li>
+              <a href="#menu-1-1" class="accordion-menu__link level-2" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#menu-1-2" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'>Посібник по роботі із даними</span>                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-2">
+
+                <li><p><a href="https://datajournalism.agency/media/data2015.pdf" class="link accordion-menu__sublink" target="_blank">Посібник по роботі з даними</a>. Про культуру роботи з даними, їх підготовку, аналіз та візуалізацію.</p></li>
+
+                <li><p><a href="https://drive.google.com/file/d/1LAn-cfDSihnHN9xdUcQdf8Cq1uk-nEQZ/view" class="link accordion-menu__sublink" target="_blank">Використання даних у боротьбі проти маніпуляції і дезінформації</a>. Як шукати історії, які бувають види графіків та типові помилки, як працювати з даними в таблицях: укладати, чистити, застосовувати формули та багато інших корисних порад по створенню якісної візуалізації.</p></li>
+                
+                <li><p><a href="https://drive.google.com/file/d/1mB7YKdSlSYYl4KWyUJGua1UZknIvhkFy/view?usp=sharing" class="link accordion-menu__sublink" target="_blank">Відкриті дані: формати та правила створення</a>. Про різні формати даних та правила роботи з ними в таблицях.</p></li>
+
+                <li><p><a href="https://socialdata.org.ua/manual/" class="link accordion-menu__sublink" target="_blank">Відкритий посібник з відкритих даних</a>. Збирання, джерела, формати, чищення та структурування даних. Основи статистики та аналізу даних, приклади застосування.</p></li>
+
+                <li><p><a href="https://texty.org.ua/archive-books/90212/dovidnyk-iz-pohanykh-danykh-vid-quartz-90212/" class="link accordion-menu__sublink" target="_blank">Довідник із поганих даних</a>. Ґрунтовно розкриває проблеми, які виникають при роботі з даними, та пропонує, як їх вирішити.</p></li>
+
+                <li><p><a href="https://drive.google.com/file/d/1e50WfCvStxZ9ZtC8SK93Ebr2G5jy_F0d/view?usp=sharing" class="link accordion-menu__sublink" target="_blank">Відкриті дані для міст. Практичний аспект</a>. Містить практичні рекомендації щодо етапів впровадження політики відкритих даних. Посібник є дороговказом та дасть відповіді на запитання, як саме організувати роботу з оприлюднення даних у машиночитаних форматах, яка структура даних є прийнятною тощо.</p></li>
+
+                <li><p><a href="https://texty.org.ua/archive-books/87136/karl-broman-orhanizatsija-danykh-u-tablytsjakh-87136/" class="link accordion-menu__sublink" target="_blank">Організація даних у таблицях</a>. Управління даними, організація даних, Microsoft Excel, таблиці (табличний формат даних).</p></li>
+              </ul>
+            </li>
 
 
+            <li>
+              <a href="#menu-1-3" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Інструменти </span>                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-3">
+                
+                <li><p><a href="https://openrefine.org/" class="link accordion-menu__sublink" target="_blank">OpenRefine</a>. Чистка даних</p> </li>
 
-       <p class="level-1">Пошук історії в даних</p>      
-       <div class="level-2-wrapper">
+                <li><p><a href="https://github.com/cmpolis/datacomb" class="link accordion-menu__sublink" target="_blank">Datacomb</a>. Аналіз даних </p></li>
+                <li><p><a href="http://shancarter.github.io/mr-data-converter/" class="link accordion-menu__sublink" target="_blank">Mr. Data Converter</a>. Переводить дані у різні формати</p></li>
+
+                <li><p><a href="http://tabula.technology/" class="link accordion-menu__sublink" target="_blank">Tabula </a>. Витягує таблиці з PDF</p></li>
+
+                <li><p><a href="https://www.trifacta.com/products/wrangler/" class="link accordion-menu__sublink" target="_blank">Trifacta</a>. Відкрита та інтерактивна хмарна платформа для інженерів даних і аналітиків, які готують дані для аналітики та машинного навчання.</p> </li>
               
-              <p class="level-2-accordion">Книги</p>
-              <div class="details">
-                <p class="details">Before the suede shoes have been
-                  worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-              </div>
-  
-              <p class="level-2-accordion">Ресурси</p>
-              <div class="details">
-                <p class="details">Because Bobux shoes are made from a
-                  variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                  different care needs, so to find out how your pair are best looked after, please see our <a
-                    href="shoe-care">Care Instructions guide</a>.</p>
-              </div>  
-        
-        </div>
-   
-        
+              </ul>
+            </li>
+
+
+            <li>
+              <a href="#menu-1-4" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'>Ресурси з відкритими даними</span>                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-4">
+                <li><a href="#menu-1-4-1" class="accordion-menu__link" data-accordion-menu>
+                  <span class="accordion-menu__icon"></span>
+                  <span class='heading-3'> Міжнародні</span>
+                  
+                  </a>
+                  <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-4-1">
+                    <li>
+                      <div  class="accordion-menu__sublink">
+                        <p><a class='link' href="https://www.kaggle.com/datasets" target="_blank">Kaggle</a></p>
+                        <p><a class='link' href="http://www.gapminder.org/data" target="_blank">Gapminder</a></p>
+                        <p><a class='link' href="https://ourworldindata.org/" target="_blank">Our World in Data</a></p>
+                        <p><a class='link' href="http://data.worldbank.org" target="_blank">World Bank Data</a></p>
+                        <p><a class='link' href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Data</a></p>
+                        <p><a class='link' href="https://catalog.data.gov/" target="_blank">Data.gov</a></p>
+                        <p><a class='link' href="http://unctadstat.unctad.org/wds/ReportFolders/reportFolders.aspx" target="_blank">UNCTAD Stat</a></p>
+                        <p><a class='link' href="https://ec.europa.eu/eurostat/web/main/data/database" target="_blank">Eurostat</a></p>
+                        <p><a class='link' href="https://apps.sentinel-hub.com/eo-browser/?zoom=9&amp;lat=46.74875&amp;lng=36.22192&amp;themeId=DEFAULT-THEME" target="_blank">Sentinel Hub</a></p>
+                        <p><a class='link' href="https://www.bis.org/" target="_blank">BIS</a></p>
+                        <p><a class='link' href="https://www.ecb.europa.eu/home/html/index.en.html" target="_blank">European Central Bank</a></p>
+                        <p><a class='link' href="http://www.fao.org/statistics/ru/" target="_blank">Food and Agriculture Organisation</a></p>
+                        <p><a class='link' href="https://ilostat.ilo.org/" target="_blank">Labour statistics</a></p>
+                        <p><a class='link' href="https://data.oecd.org/" target="_blank">Organisation for Economic Co-operation and Development</a></p>
+                        <p><a class='link' href="https://en.unesco.org/" target="_blank">UNESCO</a></p>
+                        <p><a class='link' href="https://www.who.int/" target="_blank">World Health Organisation</a></p>
+                        <p><a class='link' href="https://www.wto.org/" target="_blank">World Trade Organisation</a></p>
+                      </div>
+                    </li>                    
+                  </ul>
+                </li>
+                <li>
+                  <a href="#menu-1-4-2" class="accordion-menu__link" data-accordion-menu>
+                    <span class="accordion-menu__icon"></span>
+                    <span class='heading-3'>Локальні</span>                  
+                  </a>
+                  <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-4-2">
+                    <li>
+                      <div  class="accordion-menu__sublink">
+                        <p><a class='link' href="https://prozorro.gov.ua/openprocurement">ProZorro</a></p>
+                        <p><a class='link' href="https://stockmarket.gov.ua/">База даних Національної комісії з цінних паперів та фондового ринку</a></p>
+                        <p><a class='link' href="http://opendata.city-adm.lviv.ua">Портал відкритих даних Львова</a></p>
+                        <p><a class='link' href="http://opendata.dniprorada.gov.ua">Портал відкритих даних Дніпра</a></p>
+                        <p><a class='link' href="http://data.kyivcity.gov.ua">Портал відкритих даних Києва</a></p>
+                        <p><a class='link' href="http://data.city.kharkov.ua">Портал відкритих даних Харкова</a></p>
+                        <p><a class='link' href="http://opendata.gov.ua">Портал відкритих даних Вінниці</a></p>
+                        <p><a class='link' href="https://data.city.cv.ua/uk/">Портал відкритих даних Чернівців</a></p>
+                        <p><a class='link' href="https://data.dn.gov.ua/uk/dataset">Портал відкритих даних Донецької ОДА</a></p>
+                      </div>
+                    </li>                 
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#menu-1-5" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'>Курси з аналізу даних</span>
+               
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-5">
+                <li><p><a href="https://datajournalism.com/watch/cleaning-data-in-excel" class="link accordion-menu__sublink" target="_blank">Cleaning Data in Excel</a>. Як чистити дані в Excel </p></li>
+                
+                <li><p><a href="https://datajournalism.com/watch/charting-tools-for-the-newsroom" class="link accordion-menu__sublink" target="_blank">Charting Tools for the Newsroom</a>. Про використання інструментів: ChartBuilder, DataWrapper та RawGraphs:</p>  
+                    <ul>
+                      <li>how to prepare the data for both tools</li>
+                      <li>how to configure charts to your needs</li>
+                      <li>how to get charts in your website</li>
+                      <li>the pros, cons and limitations of both chart tools</li>
+                    </ul>                    
+                                      
+                </li>
+
+                <li>
+                  <p><a href="https://datajournalism.com/watch/doing-journalism-with-data-first-steps-skills-and-tools" class="link accordion-menu__sublink" target="_blank">Doing Journalism with Data: First Steps Skills and Tools
+                  </a>:</p>
+                  <ul>
+                    <li>Module 1 : Data journalism in the newsroom</li>
+                    <li>Module 2 : Finding data to support stories</li>
+                    <li>Module 3 : Finding story ideas with data analysis</li>
+                    <li>Module 4 : Dealing with messy data</li>
+                    <li>Module 5 : Telling stories with visualisation</li>
+
+                  </ul>
+                </li>
+
+                <li>
+                  <p><a href="https://datajournalism.com/watch/bulletproof-data-journalism" class="link accordion-menu__sublink" target="_blank">Bulletproof Data Journalism</a>:</p>
+                  <ul>
+                    <li>Coincidences and Freak Accidents</li>
+                    <li>Hidden Influences</li>
+                    <li>Cherry Picking</li>
+                    <li>Flaws in the Data</li>
+                    <li>Misinterpretations and Wishful Thinking</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <p><a href="https://www.coursera.org/specializations/jhu-data-science" class="link accordion-menu__sublink" target="_blank">Data Science specialisation</a>:</p>
+                  <ul>
+                    <li>Use R to clean, analyze, and visualize data</li>
+                    <li>Navigate the entire data science pipeline from data acquisition to publication.</li>
+                    <li>Use GitHub to manage data science projects</li>
+                    <li>Perform regression analysis, least squares and inference using regression models</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="accordion-menu__item">
+          <a href="#menu-2" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Вибір типу графіка</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-2">
+            <li>
+              <a href="#menu-2-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-2-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">The functional art</a>, Alberto Cairo</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Data Points: Visualization That Means Something</a>, Nathan Yau</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Fundamentals of Data Visualization</a>, Claus O. Wilke</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The grammar of graphics</a>, Leland Wilkinson</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Visual Display of Quantitative Information</a>, Edward Tufte</p></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#menu-2-2" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Інструменти для створення графіки</span>
+                
+              </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-2-2">
+                <li><p><a href="https://quartz.github.io/Chartbuilder/" class="link accordion-menu__sublink">ChartBuilder</a>. Простий, повністю безкоштовний</p></li>
+                <li><p><a href="https://www.datawrapper.de/" class="link accordion-menu__sublink">DataWrapper</a>. Потужний, є безкоштовна версія</p></li>
+                <li><p><a href="https://rawgraphs.io/" class="link accordion-menu__sublink">RawGraphs</a>. Повністю безкоштовний, використовує бібліотеку d3.js</p></li>
+                <li><p><a href="https://flourish.studio/" class="link accordion-menu__sublink">Flourish</a>. Є безкоштовна версія, потужний, можна завантажити файл векторному форматі, але є обмеження</p></li>
+                <li><p><a href="https://developers.google.com/chart" class="link accordion-menu__sublink">Google Charts</a>. Безкоштовний, хороша альтернатива Excel                </p></li>
+                <li><p><a href="https://www.stat.auckland.ac.nz/~wild/iNZight/" class="link accordion-menu__sublink">iNZight</a>. Безкоштовний інструмент для аналізу даних</p></li>
+                <li><p><a href="https://www.tableau.com/" class="link accordion-menu__sublink">Tableau</a>. Є безкоштовна версія, багато можливостей, специфічний інтерфейс</p></li>
+              </ul>
+            </li>
+
+
+
+            </ul>
+         </li>
 
 
 
 
-        <p class="level-1">Дизайн в інфографіці </p>      
-        <div class="level-2-wrapper">
-                 
-               <p class="level-2-accordion">Книги</p>
-               <div class="details">
-                 <p class="details">Before the suede shoes have been
-                   worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-               </div>
-   
-               <p class="level-2-accordion">Курси</p>
-               <div class="details">
-                 <p class="details">Because Bobux shoes are made from a
-                   variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                   different care needs, so to find out how your pair are best looked after, please see our <a
-                     href="shoe-care">Care Instructions guide</a>.</p>
-               </div>
-   
-               <p class="level-2-accordion">Ресурси</p>
-               <div class="details">
-                 <p class="details">Leather shoes can be particularly
-                   prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                     Instructions guide</a>. </p>
-               </div>
-   
-   
-               <p class="level-2-accordion">Інструменти</p>
-               <div class="details">
-                 <p class="details">Leather shoes can be particularly
-                   prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                     Instructions guide</a>. </p>
-               </div>      
-           
-         </div>
-   
-         
+         <li class="accordion-menu__item">
+          <a href="#menu-3" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Пошук історії в даних</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-3">
+            <li>
+              <a href="#menu-3-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-3-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
+
+
+         <li class="accordion-menu__item">
+          <a href="#menu-4" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Дизайн в інфографіці</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-4">
+            <li>
+              <a href="#menu-4-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+               
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-4-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
+
+
+         <li class="accordion-menu__item">
+          <a href="#menu-5" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Карти</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-5">
+            <li>
+              <a href="#menu-5-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-5-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
+
+
+         <li class="accordion-menu__item">
+          <a href="#menu-6" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Інтерактивні графіки</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-6">
+            <li>
+              <a href="#menu-6-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-6-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
 
 
 
-
-         <p class="level-1">Карти</p>      
-         <div class="level-2-wrapper">                
-                <p class="level-2-accordion">Книги</p>
-                <div class="details">
-                  <p class="details">Before the suede shoes have been
-                    worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-                </div>
-    
-                <p class="level-2-accordion">Інструменти</p>
-                <div class="details">
-                  <p class="details">Because Bobux shoes are made from a
-                    variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                    different care needs, so to find out how your pair are best looked after, please see our <a
-                      href="shoe-care">Care Instructions guide</a>.</p>
-                </div>
-    
-                <p class="level-2-accordion">Ресурси </p>
-                <div class="details">
-                  <p class="details">Leather shoes can be particularly
-                    prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                      Instructions guide</a>. </p>
-                </div>  
-    
-                <p class="level-2-accordion">Курси</p>
-                <div class="details">
-                  <p class="details">Leather shoes can be particularly
-                    prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                      Instructions guide</a>. </p>
-                </div>         
-            
-          </div>
-   
-          
+         <li class="accordion-menu__item">
+          <a href="#menu-7" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Курси в Україні</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-7">
+            <li>
+              <a href="#menu-7-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'> Книги </span>
+                
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-7-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
 
 
+         <li class="accordion-menu__item">
+          <a href="#menu-8" class="accordion-menu__link" data-accordion-menu>
+            <span class='heading-1'>Персоналії та блоги</span>
+            <span class="accordion-menu__icon"></span>
+          </a>
+          <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-8">
+            <li>
+              <a href="#menu-8-1" class="accordion-menu__link" data-accordion-menu>
+                <span class="accordion-menu__icon"></span>
+                <span class='heading-2'>Книги</span> 
+                
+            </a>
+              <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-8-1">
+                <li><p><a href="#" class="link accordion-menu__sublink">Naked Statistics</a>, Charles Wheelan</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">How not to be wrong</a>, Jordan Ellenberg</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">Statistics unplugged</a>, Sally Caldwell</p></li>
+                <li><p><a href="#" class="link accordion-menu__sublink">The Elements of Data Analytic Style</a>, Jeff Leek</p></li>
+              </ul>
+            </li>
+            </ul>
+         </li>
 
 
-          <p class="level-1">Інтерактивні графіки</p>      
-          <div class="level-2-wrapper">                      
-                 <p class="level-2-accordion">Книги</p>
-                 <div class="details">
-                   <p class="details">Before the suede shoes have been
-                     worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>
-                 </div>
-     
-                 <p class="level-2-accordion">Ресурси</p>
-                 <div class="details">
-                   <p class="details">Because Bobux shoes are made from a
-                     variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                     different care needs, so to find out how your pair are best looked after, please see our <a
-                       href="shoe-care">Care Instructions guide</a>.</p>
-                 </div>
-     
-                 <p class="level-2-accordion">Курси</p>
-                 <div class="details">
-                   <p class="details">Leather shoes can be particularly
-                     prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                       Instructions guide</a>. </p>
-                 </div>
-     
-     
-                 <p class="level-2-accordion">Ресурси з відкритими даними </p>
-                 <div class="details">
-                   <p class="details">Leather shoes can be particularly
-                     prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                       Instructions guide</a>. </p>
-                 </div>
-     
-                 <p class="level-2-accordion">Курси з аналізу даних</p>
-                 <div class="details">
-                   <p class="details">Leather shoes can be particularly
-                     prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                       Instructions guide</a>. </p>
-                 </div>         
-            
-           </div>
-   
-           
-
-
-
-
-           <p class="level-1">Курси в Україні</p>      
-           <div class="level-2-wrapper">             
-                    <p class="details">Before the suede shoes have been
-                      worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>                 
-      
-                    <p class="details">Because Bobux shoes are made from a
-                      variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                      different care needs, so to find out how your pair are best looked after, please see our <a
-                        href="shoe-care">Care Instructions guide</a>.</p>      
-                 
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-                 
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-                          
-             
-            </div>
-
-
-
-
-            <p class="level-1">Персоналії та блоги</p>      
-            <div class="level-2-wrapper">             
-                    <p class="details">Before the suede shoes have been
-                      worn, apply a suitable waterproofing spray. This will greatly reduce the risk of liquid stains. </p>                 
-      
-                    <p class="details">Because Bobux shoes are made from a
-                      variety of leathers and textiles, there’s no one-size-fits-all care method. Different shoes have
-                      different care needs, so to find out how your pair are best looked after, please see our <a
-                        href="shoe-care">Care Instructions guide</a>.</p>      
-                 
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-                 
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-
-                    <p class="details">Leather shoes can be particularly
-                      prone to scuffing if they come into contact with an abrasive surface. <a href="shoe-care">Care
-                        Instructions guide</a>. </p>
-                          
-              
-            </div>
-          
-         
-   
-
-  
-
-
-
-
-
-
-
+      </ul>
+    </nav>
   </div>
+</main>
 
 
+  <script>
 
-  <script src='js/main.js'></script>
+    var accordionMenu = function () {
+
+      /**
+      * Element.closest() polyfill
+      * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
+      */
+      if (!Element.prototype.closest) {
+        if (!Element.prototype.matches) {
+          Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+        }
+        Element.prototype.closest = function (s) {
+          var el = this;
+          var ancestor = this;
+          if (!document.documentElement.contains(el)) return null;
+          do {
+            if (ancestor.matches(s)) return ancestor;
+            ancestor = ancestor.parentElement;
+          } while (ancestor !== null);
+          return null;
+        };
+      }
+
+      // Listen for click on the document
+      // Accordiom menu functionality
+      document.addEventListener('click', function (event) {
+
+        // Bail if our clicked element doesn't match
+        var trigger = event.target.closest('[data-accordion-menu]');
+        if (!trigger) return;
+
+        // Get the target content
+        var target = document.querySelector(trigger.hash);
+        if (!target) return;
+
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // Toggle our content
+        target.classList.toggle('accordion-menu--hidden');
+
+        // Toggle trigger class
+        trigger.classList.toggle('accordion-menu--active');
+      });
+
+      // Listen for click on the document
+      // Accordion parent menu functionality
+      document.addEventListener('click', function (event) {
+
+        // Bail if our clicked element doesn't match
+        var trigger = event.target.closest('[data-accordion-menu-nav]');
+        if (!trigger) return;
+
+        // Get the target content
+        var target = document.querySelector(trigger.hash);
+        if (!target) return;
+
+        // Prevent default link behavior
+        event.preventDefault();
+
+        // If the content is already expanded, collapse it and quit
+        if (target.classList.contains('active')) {
+          target.classList.remove('active');
+          return;
+        }
+
+        // Get all open accordion content, loop through it, and close it
+        var accordions = document.querySelectorAll('[data-accordion-wrapper]');
+        for (var i = 0; i < accordions.length; i++) {
+          accordions[i].classList.remove('active');
+        }
+
+        // Toggle our content
+        target.classList.toggle('active');
+      });
+
+    };
+
+    accordionMenu();
+
+  </script>
+
 </body>
 
 </html>

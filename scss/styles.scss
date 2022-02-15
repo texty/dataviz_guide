@@ -1,0 +1,137 @@
+h1 {
+    width: max-content;
+    display: block;
+    margin: 50px auto;
+    font-size: 56px;
+}
+
+main, #intro {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto 100px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a.link {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  ul {
+      margin-bottom: 20px;
+  }
+
+    .accordion-menu--hidden {
+      display: none;
+    }
+
+    .accordion-menu__list,
+    .accordion-menu__sublist {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .accordion-menu__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+   }
+
+    .accordion-menu__icon {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      transition: .2s all;
+    }
+
+    .accordion-menu__icon:before,
+    .accordion-menu__icon:after {
+      content: "";
+      display: block;
+      background-color: #333;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transition: .35s;
+      width: 100%;
+      height: 2px;
+    }
+
+    .accordion-menu__icon:before {
+      transform: translateY(-50%);
+    }
+
+    .accordion-menu__icon:after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    .accordion-menu--active .accordion-menu__icon:before {
+      transform: translateY(-50%) rotate(-90deg);
+      opacity: 0;
+    }
+
+    .accordion-menu--active .accordion-menu__icon:after {
+      transform: translateY(-50%) rotate(0);
+    }
+
+    .accordion-menu__sublist {
+      margin-left: 1.25rem;
+    }
+
+    .accordion-menu__sublist .accordion-menu__link {
+      justify-content: left;
+    }
+
+    .accordion-menu__sublink {      
+      padding-top: 1rem;
+      padding-bottom: 1rem;      
+    }
+
+    .accordion-menu-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      overflow: scroll;
+    }
+
+    .accordion-menu-nav__link:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    .accordion-menu-wrapper {
+      display: none;
+    }
+
+    .accordion-menu-wrapper.active {
+      display: block;
+    }
+
+    .accordion-menu__item {
+      border-top: 1px solid black;
+    }
+
+    .accordion-menu__item:nth-last-child(1) {
+      border-bottom: 1px solid black;
+    }
+
+    .heading-1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .heading-2 {
+      font-size: 20px;
+      font-weight: bold;      
+    }
+
+    .heading-2, .heading-3 {
+      margin-left: 10px;
+    }
