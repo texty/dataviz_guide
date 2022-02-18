@@ -36,7 +36,7 @@ d3.csv('data/books.csv').then(function(books){
         group.forEach(function(el){
             splide.add(el.html);
         })
-
+   
         d3.select('#books-wrapper').style('display','flex');
 
         
