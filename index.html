@@ -9,6 +9,7 @@
   <!-- Slider library -->
   <link rel="stylesheet" href='lib/splide.min.css'/>
   <script src='lib/splide.min.js'></script>
+  <script src='lib/d3v5.min.js'></script>
 
   <link rel='stylesheet' href='css/styles.css'/>
 </head>
@@ -42,10 +43,10 @@
                 
               </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-1-1">
-                <li class='open-modal'><p><span class="link accordion-menu__sublink">Naked Statistics</span>, Charles Wheelan</p></li>
-                <li class='open-modal'><p><span class="link accordion-menu__sublink">How not to be wrong</span>, Jordan Ellenberg</p></li>
-                <li class='open-modal'><p><span class="link accordion-menu__sublink">Statistics unplugged</span>, Sally Caldwell</p></li>
-                <li class='open-modal'><p><span class="link accordion-menu__sublink">The Elements of Data Analytic Style</span>, Jeff Leek</p></li>
+                <li class='open-modal' data-value='1'><p><span class="link accordion-menu__sublink">Naked Statistics</span>, Charles Wheelan</p></li>
+                <li class='open-modal' data-value='2'><p><span class="link accordion-menu__sublink">How not to be wrong</span>, Jordan Ellenberg</p></li>
+                <li class='open-modal' data-value='3'><p><span class="link accordion-menu__sublink">Statistics unplugged</span>, Sally Caldwell</p></li>
+                <li class='open-modal' data-value='4'><p><span class="link accordion-menu__sublink">The Elements of Data Analytic Style</span>, Jeff Leek</p></li>
               </ul>
             </li>
 
@@ -223,11 +224,11 @@
                 
               </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-2-1">
-                <li><p><a href="#" class="link accordion-menu__sublink">The functional art</a>, Alberto Cairo</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Data Points: Visualization That Means Something</a>, Nathan Yau</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Fundamentals of Data Visualization</a>, Claus O. Wilke</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">The grammar of graphics</a>, Leland Wilkinson</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">The Visual Display of Quantitative Information</a>, Edward Tufte</p></li>
+                <li class='open-modal' data-value='5'><p><span class="link accordion-menu__sublink">The functional art</span>, Alberto Cairo</p></li>
+                <li class='open-modal' data-value='6'><p><span class="link accordion-menu__sublink">Data Points: Visualization That Means Something</span>, Nathan Yau</p></li>
+                <li class='open-modal' data-value='7'><p><span class="link accordion-menu__sublink">Fundamentals of Data Visualization</span>, Claus O. Wilke</p></li>
+                <li class='open-modal' data-value='8'><p><span class="link accordion-menu__sublink">The grammar of graphics</span>, Leland Wilkinson</p></li>
+                <li class='open-modal' data-value='9'><p><span class="link accordion-menu__sublink">The Visual Display of Quantitative Information</span>, Edward Tufte</p></li>
               </ul>
             </li>
 
@@ -280,10 +281,10 @@
                 <span class='heading-2'> Книги </span>                
             </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-3-1">
-                <li><p><a href="#" class="link accordion-menu__sublink">The truthful art</a>, Alberto Cairo</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">How charts lie</a>, Alberto Cairo</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Visualize this</a>, Nathan Yau</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Storytelling with data</a>,  Cole Nussbaumer Knaflic</p></li>
+                <li class='open-modal' data-value='10'><p><span class="link accordion-menu__sublink">The truthful art</span>, Alberto Cairo</p></li>
+                <li class='open-modal' data-value='11'><p><span class="link accordion-menu__sublink">How charts lie</span>, Alberto Cairo</p></li>
+                <li class='open-modal' data-value='12'><p><span class="link accordion-menu__sublink">Visualize this</span>, Nathan Yau</p></li>
+                <li class='open-modal' data-value='13'><p><span class="link accordion-menu__sublink">Storytelling with data</span>,  Cole Nussbaumer Knaflic</p></li>
               </ul>
             </li>
 
@@ -338,10 +339,10 @@
                 <span class='heading-2'> Книги </span>               
             </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-4-1">
-                <li><p><a href="#" class="link accordion-menu__sublink">Visualization analysis and design</a>, Tamara Munzner </p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Information Visualization: Perception for Design</a>, Colin Ware</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Envisioning Information</a>, Edward Rolf Tufte</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Data Visualisation</a>, Andy Kirk</p></li>
+                <li class='open-modal' data-value='14'><p><span class="link accordion-menu__sublink">Visualization analysis and design</span>, Tamara Munzner </p></li>
+                <li class='open-modal' data-value='15'><p><span class="link accordion-menu__sublink">Information Visualization: Perception for Design</span>, Colin Ware</p></li>
+                <li class='open-modal' data-value='16'><p><span class="link accordion-menu__sublink">Envisioning Information</span>, Edward Rolf Tufte</p></li>
+                <li class='open-modal' data-value='17'><p><span class="link accordion-menu__sublink">Data Visualisation</span>, Andy Kirk</p></li>
               </ul>
             </li>
 
@@ -411,8 +412,8 @@
                 <span class='heading-2'> Книги </span>                
             </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-5-1">
-                <li><p><a href="#" class="link accordion-menu__sublink">How to lie with maps</a>, Mark Monmonier</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Thematic Cartography and Geovisualization</a>, Terry A. Slocum</p></li>             
+                <li class='open-modal' data-value='18'><p><span class="link accordion-menu__sublink">How to lie with maps</span>, Mark Monmonier</p></li>
+                <li class='open-modal' data-value='19'><p><span class="link accordion-menu__sublink">Thematic Cartography and Geovisualization</span>, Terry A. Slocum</p></li>             
               </ul>
             </li>
 
@@ -515,11 +516,11 @@
                 <span class='heading-2'> Книги </span>                
             </a>
               <ul class="accordion-menu__sublist accordion-menu--hidden" id="menu-6-1">
-                <li><p><a href="#" class="link accordion-menu__sublink">Interactive Data visualization for web</a>, Scott Murray</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">D3.js in action</a>, Elijah Meeks</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">R for Data Science</a>, Hadley Wickham, Garrett Grolemund</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Advanced R</a>,  Chapman & Hall</p></li>
-                <li><p><a href="#" class="link accordion-menu__sublink">Data Visualization</a>, Kieran Healy</p></li>
+                <li class='open-modal' data-value='20'><p><span class="link accordion-menu__sublink">Interactive Data visualization for web</span>, Scott Murray</p></li>
+                <li class='open-modal' data-value='21'><p><span class="link accordion-menu__sublink">D3.js in action</span>, Elijah Meeks</p></li>
+                <li class='open-modal' data-value='22'><p><span class="link accordion-menu__sublink">R for Data Science</span>, Hadley Wickham, Garrett Grolemund</p></li>
+                <li class='open-modal' data-value='23'><p><span class="link accordion-menu__sublink">Advanced R</span>,  Chapman & Hall</p></li>
+                <li class='open-modal' data-value='24'><p><span class="link accordion-menu__sublink">Data Visualization</span>, Kieran Healy</p></li>
               </ul>
             </li>
 

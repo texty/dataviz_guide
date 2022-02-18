@@ -28,9 +28,15 @@ main, #intro {
     text-decoration: none;
   }
 
-  a.link, span.link {
+  a.link {
     text-decoration: underline;
     color: blue;
+  }
+
+  span.link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
   }
 
   ul {
@@ -155,14 +161,14 @@ main, #intro {
     }
 
 
-    #books-wrapper {     
+    #books-wrapper {  
       position: fixed;
       top:0;
       left:0;
       width: 100%;
       height: auto;   
       min-height: 100vh;
-      display: flex; 
+      display: none; 
       background-color: #333;
     }
 
@@ -186,6 +192,7 @@ main, #intro {
     .splide__slide {
       display: grid;
       grid-template-columns: 1fr 2fr;
+      min-height: 80vh;
       @media(max-width: 950px){
         display: block;
       }   
@@ -200,11 +207,12 @@ main, #intro {
 
         div {
           margin: auto;
+          width: 100%;
 
           img {
             margin: auto;       
             max-height: 80vh;
-            max-width: 90%;
+            width: 90%;
             display: block;
             @media(max-width: 950px){
               width: 200px;            

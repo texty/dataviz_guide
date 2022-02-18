@@ -28,9 +28,15 @@ a {
   text-decoration: none;
 }
 
-a.link, span.link {
+a.link {
   text-decoration: underline;
   color: blue;
+}
+
+span.link {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
 }
 
 ul {
@@ -179,9 +185,7 @@ ul {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   background-color: #333;
 }
 
@@ -207,6 +211,7 @@ ul {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  min-height: 80vh;
 }
 
 @media (max-width: 950px) {
@@ -234,12 +239,13 @@ ul {
 
 .splide__slide .book-cover div {
   margin: auto;
+  width: 100%;
 }
 
 .splide__slide .book-cover div img {
   margin: auto;
   max-height: 80vh;
-  max-width: 90%;
+  width: 90%;
   display: block;
 }
 
