@@ -399,7 +399,7 @@ id,group,img,link,html
   
           </div>          
         </li>"
-22,6,R_for_data_scince.jpg,https://r4ds.had.co.nz/index.html,"<li class='splide__slide'>
+22,1,R_for_data_scince.jpg,https://r4ds.had.co.nz/index.html,"<li class='splide__slide'>
           <div class='book-cover'>
             <div>
               <img src='img/R_for_data_scince.jpg'/>
@@ -423,7 +423,7 @@ id,group,img,link,html
   
           </div>          
         </li>"
-23,6,AdvancedR.png,http://adv-r.had.co.nz/,"<li class='splide__slide'>
+23,1,AdvancedR.png,http://adv-r.had.co.nz/,"<li class='splide__slide'>
           <div class='book-cover'>
             <div>
               <img src='img/AdvancedR.png'/>
