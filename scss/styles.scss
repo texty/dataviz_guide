@@ -5,6 +5,19 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.desktop-only {
+  @media(max-width: 800px){
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @media(max-width: 800px){
+    display: block;
+  }
+}
+
 h1 {
     width: max-content;
     display: block;

@@ -3,6 +3,22 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+@media (max-width: 800px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
 h1 {
   width: -webkit-max-content;
   width: -moz-max-content;
